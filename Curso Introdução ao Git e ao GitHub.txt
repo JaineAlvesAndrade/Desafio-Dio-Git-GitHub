@@ -1,0 +1,71 @@
+# Anotações das Aulas de Introdução ao Git/GitHub :pencil:
+
+## Comandos
+
+#### Windows
+
+- **cd** - entrar no diretório;
+- **cd ..** - voltar para o diretório anterior;
+- **dir** - listar o conteúdo da pasta;
+- **cls** - limpar a tela do Prompt;
+- **mkdir** - criar uma pasta;
+- **echo** (+ conteúdo + **>** + nomedoarquivo + formato) - criar um arquivo;
+- **del** - deletar o conteúdo de uma pasta;
+- **rmdir** (+ nomedapasta + **/S /Q**) - deletar uma pasta.
+
+
+
+#### Linux
+
+- **cd** - entrar no diretório;
+- **cd ..** - voltar para o diretório anterior;
+- **ls** - listar o conteúdo da pasta (usar a flag -a para ver uma pasta oculta);
+- **Clear** (ou **Ctrl** + **L**) - limpar a tela do Prompt;
+- **echo** (+ conteúdo + **>** + nomedoarquivo + formato) - criar um arquivo;
+- **mkdir** - criar uma pasta;
+- **rm -rf** - deletar uma pasta;
+- **openssl sha 1** (+ nomedoarquivo + **.txt**) - criptografa um arquivo e fornece uma identificação de 40 dígitos;
+- **git init** -  inicializa um repositório na pasta em questão;
+- **git clone** - clona do repositório remoto (GitHub) e o executa no seu repositório local;
+- **git add * ** - adiciona todos os arquivos da pasta;
+- **git push** - empurra o código do seu ambiente de desenvolvimento local para o servidor remoto;
+- **git status** - informa o status dos commits.
+
+
+
+## Conceitos
+
+​	O Git é um sistema de versionamento de código distribuído, ou seja, um sistema que possui múltiplas cópias de si mesmo em diferentes locais.  
+
+- **Blob** - os arquivos criptografados ficam guardados dentro dos blobs. Os blobs possuem os metadados do arquivo (tamanho do arquivo e etc.)
+
+- **Tree** - armazenam blobs, os metadados deles e outras trees.
+
+- **Commit** - aponta para trees e outros commits. É possível acrescentar uma mensagem com o autor, a data, hora de criação e etc.
+
+  Caso seja feita qualquer alteração em um arquivo será gerado um novo sha1 (criptografia) que irá alterar o sha1 do blob, que por sua vez alterará o sha1 da tree, que por sua vez alterará o sha1 do commit. Portanto a criptografia do commit serve também como forma de saber se nada do arquivo foi alterado.
+
+
+
+## Problemas e Soluções
+
+- **O que acontece quando você gera commits no seu repositório local com o email e nome diferentes dos usados no GitHub?**
+
+  Os commits ainda poderão ser empurrados para o GitHub, porém o email e o nome aparecerão diferentes.
+
+- **O que acontece quando você tenta empurrar o código para o GitHub após ter feito alterações?**
+
+  O sistema Git irá pedir para você puxar de volta o código e alterá-lo manualmente para decidir qual versão deverá ser utilizada. 
+
+
+
+
+
+​							**Espero que tenha sido útil, boa sorte na sua jornada Dev!** :four_leaf_clover: :yellow_heart: 
+
+
+
+
+
+​	
+
